@@ -1,9 +1,11 @@
 .App {
   background-color: pink;
+  height: 100vh;
+  text-align: center;
 }
 
 h2 {
-  color: chartreuse;
+  color: rgb(19, 183, 36);
 }
 
 #bold_text {
