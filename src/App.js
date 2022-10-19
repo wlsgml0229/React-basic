@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import Counter from "./Counter";
 import MyHeader from "./MyHeader";
+import Container from "./Container";
 
 /**
  * jsx로 컴포넌트를 만들어서 리턴하려면 반드시하나의 태그로 묶어야한다.
@@ -11,25 +12,21 @@ import MyHeader from "./MyHeader";
  */
 
 function App() {
-  // let name = "JINIMI";
-
-  //css 인라인 방법
-  // const style = {
-  //   App: {
-  //     backgroundColor: "pink",
-  //   },
-  //   h2: {
-  //     color: "chartreuse",
-  //   },
-  //   bold_text: {
-  //     color: "aqua",
-  //   },
-  // };
+  // props가 너무 길어질 수 있기 때문에 객체로 생성해서
+  const counterProps = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+  };
   return (
-    <div className="App">
-      <MyHeader />
-      <Counter />
-    </div>
+    <Container>
+      <div>
+        <MyHeader />
+        <Counter {...counterProps} />
+      </div>
+    </Container>
   );
 }
 
